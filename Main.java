@@ -1,113 +1,86 @@
 public class Main {
 
+    public static void print(String expression, Object supposedResult, Object realResult) {
+        String supposed = String.valueOf(supposedResult);
+        String real = String.valueOf(realResult);
+
+        System.out.println("\n" + expression);
+        System.out.println("Is result " + supposed + "?");
+
+        // Uncomment this to see real result
+        // if (!supposedResult.equals(realResult))
+        //     System.out.println("No! It is " + real);
+    }
+
     public static void main(String[] args) {
         System.out.println("## Assignment Operator");
-        System.out.println("");
-        System.out.println("int i = 7;");
+
         int i = 7;
-        System.out.println("Is result 7?");
+        print("int i = 7;", 7, i);
 
-        System.out.println("");
-        System.out.println("## Mathematical operators");
-        System.out.println("");
-        System.out.println("i = 1 + 2;");
+        System.out.println("\n## Mathematical operators");
+
         i = 1 + 2;
-        System.out.println("Is result 3?");
+        print("i = 1 + 2;", 3, i);
 
-        System.out.println("");
-        System.out.println("i = 7 - 3;");
         i = 7 - 3;
-        System.out.println("Is result 4?");
+        print("i = 7 - 3;", 4, i);
 
-        System.out.println("");
-        System.out.println("i = 3 * 4;");
         i = 3 * 4;
-        System.out.println("Is result 12?");
+        print("i = 3 * 4;", 12, i);
 
-        System.out.println("");
-        System.out.println("i = 9 / 3;");
         i = 9 / 3;
-        System.out.println("Is result 3?");
+        print("i = 9 / 3;", 3, i);
 
-        System.out.println("");
-        System.out.println("i = 7 % 3;");
         i = 7 % 3;
-        System.out.println("Is result 1?");
+        print("i = 7 % 3;", 1, i);
 
-        System.out.println("");
-        System.out.println("i = 10 + 7 % 3;");
         i = 10 + 7 % 3;
-        System.out.println("Is result 2?");
+        print("i = 10 + 7 % 3;", 2, i);
 
-        System.out.println("");
-        System.out.println("i = 7; i++;");
         i = 7; i++;
-        System.out.println("Is result 8?");
+        print("i = 7; i++;", 8, i);
 
-        System.out.println("");
-        System.out.println("i = 9; i--;");
         i = 9; i--;
-        System.out.println("Is result 8?");
+        print("i = 9; i--;", 8, i);
 
-        System.out.println("");
-        System.out.println("i = 10 + 7 % 3;");
         i = 10 + 7 % 3;
-        System.out.println("Is result 2?");
+        print("i = 10 + 7 % 3;", 2, i);
 
 
-        System.out.println("");
-        System.out.println("## Relational operators");
-        System.out.println("");
-        System.out.println("boolean b; i = 1; int j = 2; b = i == j;");
+        System.out.println("\n## Relational operators");
+
         boolean b; i = 1; int j = 2; b = i == j;
-        System.out.println("Is result false?");
+        print("boolean b; i = 1; int j = 2; b = i == j;", false, b);
 
-        System.out.println("");
-        System.out.println("b = i < j;");
         b = i < j;
-        System.out.println("Is result true?");
+        print("b = i < j;", true, b);
 
-        System.out.println("");
-        System.out.println("b = i <= j;");
         b = i <= j;
-        System.out.println("Is result true?");
+        print("b = i <= j;", true, b);
 
-        System.out.println("");
-        System.out.println("b = i > j;");
         b = i > j;
-        System.out.println("Is result false?");
+        print("b = i > j;", false, b);
 
-        System.out.println("");
-        System.out.println("b = i >= j;");
         b = i >= j;
-        System.out.println("Is result false?");
+        print("b = i >= j;", false, b);
 
-        System.out.println("");
-        System.out.println("b = i < j || i == j;");
         b = i < j || i == j;
-        System.out.println("Is result false?");
+        print("b = i < j || i == j;", false, b);
 
-        System.out.println("");
-        System.out.println("b = i < j && i == j;");
         b = i < j && i == j;
-        System.out.println("Is result false?");
+        print("b = i < j && i == j;", false, b);
 
-        System.out.println("");
-        System.out.println("String s = (i < j) ? 'i < j' : 'i >= j';");
         String s = (i < j) ? "i < j" : "i >= j";
-        System.out.println("Is result 'i >= j'?");
+        print("String s = (i < j) ? 'i < j' : 'i >= j';", "i >= j", s);
 
-        System.out.println("");
-        System.out.println("## Parentheses");
-        System.out.println("");
-        System.out.println("i = (10 + 7) % 3;");
+        System.out.println("\n## Parentheses");
+
         i = (10 + 7) % 3;
-        System.out.println("Is result 2?");
+        print("i = (10 + 7) % 3;", 2, i);
 
-        System.out.println("");
-        System.out.println("i = 10 + (7 % 3);");
         i = 10 + (7 % 3);
-        System.out.println("Is result 2?");
+        print("i = 10 + (7 % 3);", 2, i);
 
     }
 }
